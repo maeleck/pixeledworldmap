@@ -48,7 +48,7 @@ const App = () => {
     }
   }, []);
 
-  const handlePanStart = useCallback((clientX: number, clientY: number) => {
+  const handlePanStart = useCallback((clientX, clientY) => {
     const viewport = mapViewportRef.current;
     if (!viewport) return;
     isDraggingRef.current = true;
@@ -62,7 +62,7 @@ const App = () => {
     viewport.style.userSelect = 'none';
   }, []);
 
-  const handlePanMove = useCallback((clientX: number, clientY: number) => {
+  const handlePanMove = useCallback((clientX, clientY) => {
     if (!isDraggingRef.current) return;
     const viewport = mapViewportRef.current;
     if (!viewport) return;
@@ -83,7 +83,7 @@ const App = () => {
     }
   }, []);
 
-  const handleMarkerClick = useCallback(async (countryName: string) => {
+  const handleMarkerClick = useCallback(async (countryName) => {
     if (selectedCountry?.countryName === countryName && isPanelVisible) {
       setIsPanelVisible(false);
       return;
