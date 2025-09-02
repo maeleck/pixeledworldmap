@@ -2,7 +2,7 @@
 import React, { useMemo } from 'react';
 
 // The user-provided ASCII art map layout.
-const mapLayout: string[] = [
+const mapLayout = [
 "....................................................................................................",
 ".                                                                                                  .",
 ".                                                                                                  .",
@@ -39,7 +39,7 @@ const mapLayout: string[] = [
 ];
 
 // Replaced Tailwind classes with hex codes for SVG fill
-const getLandColor = (char: string): string => {
+const getLandColor = (char) => {
     switch (char) {
         case '#': return '#064e3b'; // emerald-900
         case '%': return '#065f46'; // emerald-800
@@ -54,16 +54,16 @@ const getLandColor = (char: string): string => {
 };
 
 
-const generatePathsForColor = (colorChar: string, layout: string[]): string[] => {
+const generatePathsForColor = (colorChar, layout) => {
     const height = layout.length;
     if (height === 0) return [];
     const width = layout[0].length;
     if (width === 0) return [];
 
-    const pointToNeighbors = new Map<string, string[]>();
-    const canonicalSegments = new Set<string>();
+    const pointToNeighbors = new Map();
+    const canonicalSegments = new Set();
 
-    const addEdge = (x1: number, y1: number, x2: number, y2: number) => {
+    const addEdge = (x1, y1, x2, y2) => {
         const key1 = `${x1},${y1}`;
         const key2 = `${x2},${y2}`;
         const canonical = key1 < key2 ? `${key1}:${key2}` : `${key2}:${key1}`;
@@ -73,8 +73,8 @@ const generatePathsForColor = (colorChar: string, layout: string[]): string[] =>
 
         if (!pointToNeighbors.has(key1)) pointToNeighbors.set(key1, []);
         if (!pointToNeighbors.has(key2)) pointToNeighbors.set(key2, []);
-        pointToNeighbors.get(key1)!.push(key2);
-        pointToNeighbors.get(key2)!.push(key1);
+        pointToNeighbors.get(key1).push(key2);
+        pointToNeighbors.get(key2).push(key1);
     };
 
     for (let y = 0; y < height; y++) {
@@ -92,7 +92,7 @@ const generatePathsForColor = (colorChar: string, layout: string[]): string[] =>
         }
     }
 
-    const paths: string[] = [];
+    const paths = [];
 
     while (pointToNeighbors.size > 0) {
         const startPointKey = pointToNeighbors.keys().next().value;
@@ -100,14 +100,14 @@ const generatePathsForColor = (colorChar: string, layout: string[]): string[] =>
         let path = `M ${startPointKey.replace(',', ' ')}`;
 
         while (pointToNeighbors.has(currentPointKey)) {
-            const neighbors = pointToNeighbors.get(currentPointKey)!;
+            const neighbors = pointToNeighbors.get(currentPointKey);
             if (neighbors.length === 0) {
                 pointToNeighbors.delete(currentPointKey);
                 break;
             }
-            const nextPointKey = neighbors.shift()!;
+            const nextPointKey = neighbors.shift();
             
-            const nextPointNeighbors = pointToNeighbors.get(nextPointKey)!;
+            const nextPointNeighbors = pointToNeighbors.get(nextPointKey);
             const index = nextPointNeighbors.indexOf(currentPointKey);
             if (index > -1) nextPointNeighbors.splice(index, 1);
 
@@ -132,7 +132,7 @@ export const WorldMapSvg = () => {
     const gridWidth = mapLayout[0]?.length || 1;
 
     const landmasses = useMemo(() => {
-        const allPaths: { color: string; d: string; }[] = [];
+        const allPaths = [];
         const uniqueChars = new Set(mapLayout.join(''));
 
         uniqueChars.forEach(char => {
