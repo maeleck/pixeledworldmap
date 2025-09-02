@@ -152,7 +152,7 @@ export const WorldMapSvg = () => {
         <div className="absolute inset-0 w-full h-full z-0 flex items-center justify-center">
             <svg
                 className="w-full h-full"
-                preserveAspectRatio="none"
+                preserveAspectRatio="xMidYMid meet"
                 viewBox={`0 0 ${gridWidth} ${gridHeight}`}
             >
                 {landmasses.map((path, index) => (
