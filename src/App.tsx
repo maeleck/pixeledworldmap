@@ -108,7 +108,7 @@ const App = () => {
   return (
     <main className="relative w-screen h-screen bg-blue-900 text-white overflow-hidden flex">
       <div className="flex-grow h-full relative">
-        <header className="absolute top-0 left-0 text-center md:text-left p-4 md:p-8 z-20 pointer-events-none">
+        <header className={`absolute top-0 left-0 text-center md:text-left p-4 md:p-8 z-20 pointer-events-none transition-opacity duration-500 ${isPanelVisible ? 'opacity-0' : 'opacity-100'}`}>
           <h1 className="font-pixel text-2xl md:text-3xl font-bold text-white tracking-tight" style={{textShadow: '0 2px 4px rgba(0,0,0,0.5)'}}>
             The Pixeled World Map
           </h1>
@@ -129,7 +129,7 @@ const App = () => {
             onTouchMove={(e) => handlePanMove(e.touches[0].clientX, e.touches[0].clientY)}
             onTouchEnd={handlePanEnd}
         >
-            <div className="relative" style={{ minWidth: '250vw', minHeight: '250vh', aspectRatio: '100 / 35' }}>
+            <div className="relative" style={{ minWidth: '200vw', minHeight: '200vh', aspectRatio: '100 / 35' }}>
                  <WorldMapSvg />
 
                 {markers.map((marker) => (
