@@ -129,7 +129,7 @@ const App = () => {
             onTouchMove={(e) => handlePanMove(e.touches[0].clientX, e.touches[0].clientY)}
             onTouchEnd={handlePanEnd}
         >
-            <div className="relative" style={{ minWidth: '150vw', minHeight: '150vh', aspectRatio: '100 / 35' }}>
+            <div className="relative" style={{ minWidth: '120vw', minHeight: '120vh', aspectRatio: '100 / 35' }}>
                  <WorldMapSvg />
 
                 {markers.map((marker) => (
