@@ -6,7 +6,7 @@ import { CountryFacts } from './types.ts';
 import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
-const App: React.FC = () => {
+const App = () => {
   // The explicit type annotation has been removed to fix a Babel parsing bug.
   // The type is inferred correctly from the array literal.
   const markers = [
