@@ -1,10 +1,10 @@
 
 import React, { useState, useCallback, useRef, useEffect } from 'react';
-import { CountryInfoPanel } from './components/CountryInfoPanel';
-import { getCountryFacts } from './services/geminiService';
-import type { CountryFacts } from './types';
-import { PinIcon } from './components/icons';
-import { WorldMapSvg } from './components/WorldMapSvg';
+import { CountryInfoPanel } from './components/CountryInfoPanel.tsx';
+import { getCountryFacts } from './services/geminiService.ts';
+import type { CountryFacts } from './types.ts';
+import { PinIcon } from './components/icons.tsx';
+import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
 type Marker = {
   countryName: string;
