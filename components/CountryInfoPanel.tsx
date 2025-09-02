@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { PopulationIcon, AreaIcon, CurrencyIcon, LanguageIcon, FactIcon, CloseIcon, CapitalIcon } from './icons.tsx';
+import { PopulationIcon, AreaIcon, CurrencyIcon, LanguageIcon, FactIcon, CloseIcon, CapitalIcon } from './icons';
 
 const SkeletonLoader = () => (
     <div className="animate-pulse p-6 space-y-6 font-pixel">
