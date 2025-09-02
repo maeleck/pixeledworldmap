@@ -1,3 +1,4 @@
+
 import React, { useMemo } from 'react';
 
 // The user-provided ASCII art map layout.
@@ -126,7 +127,7 @@ const generatePathsForColor = (colorChar: string, layout: string[]): string[] =>
     return paths;
 };
 
-export const WorldMapSvg: React.FC = () => {
+export const WorldMapSvg = () => {
     const gridHeight = mapLayout.length;
     const gridWidth = mapLayout[0]?.length || 1;
 
