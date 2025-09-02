@@ -1,8 +1,6 @@
 
-import { CountryFacts } from '../types.ts';
-
 // Static data instead of API calls
-const countryData: CountryFacts[] = [
+const countryData = [
   {
     countryName: 'United States of America',
     capital: 'Washington, D.C.',
@@ -259,7 +257,7 @@ const countryData: CountryFacts[] = [
 
 // In a real app, this would be a Gemini API call.
 // For this demo, we'll simulate the API call by finding the data.
-export const getCountryFacts = async (countryName: string): Promise<CountryFacts> => {
+export const getCountryFacts = async (countryName) => {
     console.log(`Fetching facts for: ${countryName}`);
     return new Promise((resolve, reject) => {
         setTimeout(() => {
