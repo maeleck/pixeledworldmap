@@ -1,4 +1,4 @@
-
+/*
 export interface CountryFacts {
   countryName: string;
   capital: string;
@@ -9,3 +9,4 @@ export interface CountryFacts {
   interestingFacts: string[];
   youtubeVideoId: string;
 }
+*/
