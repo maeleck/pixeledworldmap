@@ -7,12 +7,9 @@ import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
 const App: React.FC = () => {
-  // Moved markers array inside the component to avoid Babel parsing issues.
-  const markers: {
-    countryName: string;
-    top: string;
-    left: string;
-  }[] = [
+  // The explicit type annotation has been removed to fix a Babel parsing bug.
+  // The type is inferred correctly from the array literal.
+  const markers = [
     { countryName: 'United States of America', top: '42%', left: '25%' },
     { countryName: 'Brazil', top: '68%', left: '35%' },
     { countryName: 'Japan', top: '31%', left: '90%' },
