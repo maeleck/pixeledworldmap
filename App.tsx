@@ -6,33 +6,33 @@ import { CountryFacts } from './types.ts';
 import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
-// Adjusted marker positions for the new ASCII map
-const markers: {
-  countryName: string;
-  top: string;
-  left: string;
-}[] = [
-  { countryName: 'United States of America', top: '42%', left: '25%' },
-  { countryName: 'Brazil', top: '68%', left: '35%' },
-  { countryName: 'Japan', top: '31%', left: '90%' },
-  { countryName: 'Australia', top: '71%', left: '85%' },
-  { countryName: 'India', top: '48%', left: '70%' },
-  { countryName: 'China', top: '36%', left: '75%' },
-  { countryName: 'Canada', top: '30%', left: '30%' },
-  { countryName: 'United Kingdom', top: '35%', left: '48%' },
-  { countryName: 'Germany', top: '38%', left: '55%' },
-  { countryName: 'Egypt', top: '48%', left: '58%' },
-  { countryName: 'South Africa', top: '80%', left: '57%' },
-  { countryName: 'Russia', top: '30%', left: '65%' },
-  { countryName: 'Argentina', top: '85%', left: '32%' },
-  { countryName: 'Mexico', top: '50%', left: '20%' },
-  { countryName: 'Nigeria', top: '55%', left: '53%' },
-  { countryName: 'Sweden', top: '28%', left: '55%' },
-  { countryName: 'Indonesia', top: '65%', left: '78%' },
-  { countryName: 'New Zealand', top: '85%', left: '93%' },
-];
-
 const App: React.FC = () => {
+  // Moved markers array inside the component to avoid Babel parsing issues.
+  const markers: {
+    countryName: string;
+    top: string;
+    left: string;
+  }[] = [
+    { countryName: 'United States of America', top: '42%', left: '25%' },
+    { countryName: 'Brazil', top: '68%', left: '35%' },
+    { countryName: 'Japan', top: '31%', left: '90%' },
+    { countryName: 'Australia', top: '71%', left: '85%' },
+    { countryName: 'India', top: '48%', left: '70%' },
+    { countryName: 'China', top: '36%', left: '75%' },
+    { countryName: 'Canada', top: '30%', left: '30%' },
+    { countryName: 'United Kingdom', top: '35%', left: '48%' },
+    { countryName: 'Germany', top: '38%', left: '55%' },
+    { countryName: 'Egypt', top: '48%', left: '58%' },
+    { countryName: 'South Africa', top: '80%', left: '57%' },
+    { countryName: 'Russia', top: '30%', left: '65%' },
+    { countryName: 'Argentina', top: '85%', left: '32%' },
+    { countryName: 'Mexico', top: '50%', left: '20%' },
+    { countryName: 'Nigeria', top: '55%', left: '53%' },
+    { countryName: 'Sweden', top: '28%', left: '55%' },
+    { countryName: 'Indonesia', top: '65%', left: '78%' },
+    { countryName: 'New Zealand', top: '85%', left: '93%' },
+  ];
+
   const [selectedCountry, setSelectedCountry] = useState<CountryFacts | null>(null);
   const [isPanelVisible, setIsPanelVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
