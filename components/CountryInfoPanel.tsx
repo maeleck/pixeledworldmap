@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import type { CountryFacts } from '../types.ts';
+import { CountryFacts } from '../types.ts';
 import { PopulationIcon, AreaIcon, CurrencyIcon, LanguageIcon, FactIcon, CloseIcon, CapitalIcon } from './icons.tsx';
 
 interface CountryInfoPanelProps {
