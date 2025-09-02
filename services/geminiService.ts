@@ -1,8 +1,8 @@
 
-import type { CountryFacts } from '../types';
+import type { CountryFacts } from '../types.ts';
 
 // Static data instead of API calls
-export const countryData: CountryFacts[] = [
+const countryData: CountryFacts[] = [
   {
     countryName: 'United States of America',
     capital: 'Washington, D.C.',
@@ -62,18 +62,18 @@ export const countryData: CountryFacts[] = [
   {
     countryName: 'Australia',
     capital: 'Canberra',
-    population: 25921089,
+    population: 25788215,
     area_sq_km: 7692024,
     currency: 'Australian Dollar (AUD)',
     officialLanguages: ['English'],
     interestingFacts: [
-      'Australia is the only continent that is also a country.',
-      'It has over 10,000 beaches.',
-      'The Great Barrier Reef is the largest coral reef system in the world.'
+        'Australia is the only continent that is also a country.',
+        'It has over 10,000 beaches.',
+        'The Great Barrier Reef is the world\'s largest coral reef system.'
     ],
-    youtubeVideoId: '_e47h6G2oSM'
+    youtubeVideoId: '7T_n_21i4mI'
   },
-  {
+    {
     countryName: 'India',
     capital: 'New Delhi',
     population: 1407563842,
@@ -82,24 +82,24 @@ export const countryData: CountryFacts[] = [
     officialLanguages: ['Hindi', 'English'],
     interestingFacts: [
         'India is the world\'s largest democracy.',
-        'The game of chess originated in India.',
+        'The game of chess was invented in India.',
         'It has the second-largest road network in the world.'
     ],
-    youtubeVideoId: 'RzVvThls8s0'
+    youtubeVideoId: '4DEaTqSLo1o'
   },
   {
     countryName: 'China',
     capital: 'Beijing',
     population: 1444216107,
     area_sq_km: 9596961,
-    currency: 'Renminbi (Yuan; CNY)',
+    currency: 'Renminbi (Yuan)',
     officialLanguages: ['Standard Chinese'],
     interestingFacts: [
         'China is the most populous country in the world.',
-        'The Great Wall of China is the largest man-made structure.',
-        'Fortune cookies are not a traditional Chinese custom.'
+        'It is the third-largest country by land area.',
+        'The Great Wall of China is the largest man-made structure in the world.'
     ],
-    youtubeVideoId: 'gZ-8-wwOKvU'
+    youtubeVideoId: 'ot1pF6ubz9A'
   },
   {
     countryName: 'United Kingdom',
@@ -109,53 +109,53 @@ export const countryData: CountryFacts[] = [
     currency: 'Pound Sterling (GBP)',
     officialLanguages: ['English'],
     interestingFacts: [
-      'Big Ben is the name of the bell, not the clock tower.',
-      'The UK is made up of England, Scotland, Wales, and Northern Ireland.',
-      'It has the shortest scheduled flight in the world, lasting only 90 seconds.'
+        'The United Kingdom is made up of four countries: England, Scotland, Wales, and Northern Ireland.',
+        'The Industrial Revolution began in the United Kingdom.',
+        'London is home to the oldest underground railway network in the world.'
     ],
-    youtubeVideoId: 'z1g8-iRr36E'
+    youtubeVideoId: 'ns9_g_r5E4U'
   },
   {
     countryName: 'Germany',
     capital: 'Berlin',
-    population: 83190556,
+    population: 83900473,
     area_sq_km: 357022,
     currency: 'Euro (EUR)',
     officialLanguages: ['German'],
     interestingFacts: [
-      'Germany has over 1,500 different types of beer.',
-      'The first printed book was made in Germany.',
-      'There are over 20,000 castles in Germany.'
+        'Germany is the most populous member state of the European Union.',
+        'It is the second-most popular immigration destination in the world, after the United States.',
+        'The cuckoo clock was invented in Germany.'
     ],
-    youtubeVideoId: 'S58qC-Gv20g'
+    youtubeVideoId: 'XfsoSft3y4E'
   },
-  {
+    {
     countryName: 'Egypt',
     capital: 'Cairo',
     population: 102334404,
-    area_sq_km: 1010408,
+    area_sq_km: 1002450,
     currency: 'Egyptian Pound (EGP)',
     officialLanguages: ['Arabic'],
     interestingFacts: [
-      'Home to the Great Pyramid of Giza, the only remaining Wonder of the Ancient World.',
-      'Ancient Egyptians invented one of the earliest forms of writing (hieroglyphics).',
-      'About 95% of Egypt\'s population lives along the River Nile.'
+        'Egypt is home to the Great Pyramid of Giza, the oldest of the Seven Wonders of the Ancient World.',
+        'The ancient Egyptians invented the 365-day calendar.',
+        'The Nile is the longest river in the world.'
     ],
-    youtubeVideoId: 'g_b9y8A0-zQ'
+    youtubeVideoId: 'r_L-JqK25wQ'
   },
   {
     countryName: 'South Africa',
-    capital: 'Pretoria, Cape Town, Bloemfontein',
+    capital: 'Pretoria (executive), Bloemfontein (judicial), Cape Town (legislative)',
     population: 59308690,
     area_sq_km: 1221037,
     currency: 'South African Rand (ZAR)',
-    officialLanguages: ['Zulu', 'Xhosa', 'Afrikaans', 'English'],
+    officialLanguages: ['Zulu', 'Xhosa', 'Afrikaans', 'English', 'Northern Sotho', 'Tswana', 'Southern Sotho', 'Tsonga', 'Swazi', 'Venda', 'Southern Ndebele'],
     interestingFacts: [
-      'South Africa has three capital cities.',
-      'It is home to Table Mountain, one of the oldest mountains in the world.',
-      'The country is the world\'s largest producer of platinum.'
+        'South Africa has three capital cities.',
+        'It is the only country in the world to have hosted the soccer, cricket and rugby World Cups.',
+        'It is home to the world\'s largest bird, the ostrich.'
     ],
-    youtubeVideoId: 'W7P7Yp32aK0'
+    youtubeVideoId: 'E2DwB__S_s4'
   },
   {
     countryName: 'Russia',
@@ -165,53 +165,53 @@ export const countryData: CountryFacts[] = [
     currency: 'Russian Ruble (RUB)',
     officialLanguages: ['Russian'],
     interestingFacts: [
-      'Russia is the largest country in the world by land area, spanning 11 time zones.',
-      'It is home to Lake Baikal, the world\'s largest freshwater lake by volume.',
-      'The Trans-Siberian Railway is the longest single railway in the world.'
+        'Russia is the largest country in the world by land area.',
+        'It spans 11 time zones.',
+        'Lake Baikal in Siberia is the world\'s largest and deepest freshwater lake.'
     ],
-    youtubeVideoId: 'd94-3-G13vo'
+    youtubeVideoId: 'D3q7g2MvT34'
   },
-  {
+    {
     countryName: 'Argentina',
     capital: 'Buenos Aires',
-    population: 45808747,
+    population: 45376763,
     area_sq_km: 2780400,
     currency: 'Argentine Peso (ARS)',
     officialLanguages: ['Spanish'],
     interestingFacts: [
-      'Argentina is the birthplace of the tango dance.',
-      'It has the highest peak in the Americas, Aconcagua.',
-      'The country is famous for its high-quality beef.'
+        'Argentina is the eighth-largest country in the world.',
+        'It is the birthplace of the tango.',
+        'The Andes Mountains, the longest mountain range in the world, run through Argentina.'
     ],
-    youtubeVideoId: 'v32Mv_9D2LU'
+    youtubeVideoId: 'u4k7yDimG8g'
   },
   {
     countryName: 'Mexico',
     capital: 'Mexico City',
-    population: 126014024,
+    population: 128932753,
     area_sq_km: 1972550,
     currency: 'Mexican Peso (MXN)',
     officialLanguages: ['Spanish'],
     interestingFacts: [
-      'Chocolate, corn, and chilies were all introduced to the world by Mexico.',
-      'It is home to the largest pyramid in the world, the Great Pyramid of Cholula.',
-      'The Chihuahua, the world\'s smallest dog breed, is named after a Mexican state.'
+        'Mexico is the most populous Spanish-speaking country in the world.',
+        'It is home to the ancient civilizations of the Maya and Aztec.',
+        'Chocolate, corn, and chilies were all introduced to the world by Mexico.'
     ],
-    youtubeVideoId: 'UYC-nCdnR8c'
+    youtubeVideoId: 'uU5y4_a5i_s'
   },
   {
     countryName: 'Nigeria',
     capital: 'Abuja',
-    population: 211400708,
+    population: 206139589,
     area_sq_km: 923768,
     currency: 'Nigerian Naira (NGN)',
     officialLanguages: ['English'],
     interestingFacts: [
-      'Nigeria is the most populous country in Africa.',
-      'It has the largest film industry in Africa, known as "Nollywood".',
-      'The country is home to over 250 ethnic groups.'
+        'Nigeria is the most populous country in Africa.',
+        'It is home to Nollywood, the second-largest film industry in the world.',
+        'The country is named after the Niger River.'
     ],
-    youtubeVideoId: 'p0KzaStq_2M'
+    youtubeVideoId: 'smwn3wGkQfk'
   },
   {
     countryName: 'Sweden',
@@ -221,52 +221,56 @@ export const countryData: CountryFacts[] = [
     currency: 'Swedish Krona (SEK)',
     officialLanguages: ['Swedish'],
     interestingFacts: [
-      'Sweden is the third-largest country in the European Union by area.',
-      'It is one of the world\'s most generous countries for foreign aid.',
-      'The country has a "right to roam", allowing public access to nature.'
+        'Sweden is one of the most sparsely populated countries in Europe.',
+        'It is the birthplace of IKEA and Spotify.',
+        'The country has a "right to roam", allowing people to freely hike through most of the countryside.'
     ],
-    youtubeVideoId: 'Kyj7kS_8L-M'
+    youtubeVideoId: 'Udda0b-b5Y0'
   },
   {
     countryName: 'Indonesia',
     capital: 'Jakarta',
-    population: 273753191,
+    population: 273523615,
     area_sq_km: 1904569,
     currency: 'Indonesian Rupiah (IDR)',
     officialLanguages: ['Indonesian'],
     interestingFacts: [
-      'Indonesia is the world\'s largest island country, with over 17,000 islands.',
-      'It is home to the Komodo dragon, the largest lizard in the world.',
-      'The country has the largest Muslim population in the world.'
+        'Indonesia is the largest archipelago in the world, with over 17,000 islands.',
+        'It is home to the Komodo dragon, the largest lizard in the world.',
+        'The country has the second-longest coastline in the world.'
     ],
-    youtubeVideoId: 'h3-GsGL_t-s'
+    youtubeVideoId: 'l1r_yCNBq1g'
   },
   {
     countryName: 'New Zealand',
     capital: 'Wellington',
-    population: 5129727,
+    population: 5122600,
     area_sq_km: 268021,
     currency: 'New Zealand Dollar (NZD)',
     officialLanguages: ['English', 'Māori'],
     interestingFacts: [
-      'More people live in Auckland than in the entire South Island.',
-      'The "Lord of the Rings" and "The Hobbit" trilogies were filmed here.',
-      'It was the first country to give women the right to vote in 1893.'
+        'New Zealand was the first country in the world to give women the right to vote.',
+        'It is home to more sheep than people.',
+        'The Lord of the Rings trilogy was filmed entirely in New Zealand.'
     ],
-    youtubeVideoId: '1z40p_aj_2Y'
+    youtubeVideoId: 'H_4Q262-E9g'
   }
 ];
 
-export function getCountryFacts(countryName: string): Promise<CountryFacts> {
-  return new Promise((resolve, reject) => {
-    // Simulate network delay
-    setTimeout(() => {
-      const data = countryData.find(c => c.countryName === countryName);
-      if (data) {
-        resolve(data);
-      } else {
-        reject(new Error(`Information for ${countryName} is not available.`));
-      }
-    }, 500); // 0.5 second delay
-  });
-}
+// In a real app, this would be a Gemini API call.
+// For this demo, we'll simulate the API call by finding the data.
+export const getCountryFacts = async (countryName: string): Promise<CountryFacts> => {
+    console.log(`Fetching facts for: ${countryName}`);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = countryData.find(c => c.countryName === countryName);
+            if (data) {
+                console.log('Found facts:', data);
+                resolve(data);
+            } else {
+                console.error(`No facts found for ${countryName}`);
+                reject(new Error(`Could not find information for ${countryName}. Please try another country.`));
+            }
+        }, 500 + Math.random() * 500); // Simulate network delay
+    });
+};
