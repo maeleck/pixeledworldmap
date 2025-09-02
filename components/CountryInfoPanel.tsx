@@ -1,15 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { CountryFacts } from '../types.ts';
 import { PopulationIcon, AreaIcon, CurrencyIcon, LanguageIcon, FactIcon, CloseIcon, CapitalIcon } from './icons.tsx';
-
-interface CountryInfoPanelProps {
-  isVisible: boolean;
-  isLoading: boolean;
-  countryFacts: CountryFacts | null;
-  error: string | null;
-  onClose: () => void;
-}
 
 const SkeletonLoader = () => (
     <div className="animate-pulse p-6 space-y-6 font-pixel">
@@ -55,7 +46,7 @@ export const CountryInfoPanel = ({
     }
   }, [countryFacts]);
   
-  const formatNumber = (num: number) => {
+  const formatNumber = (num) => {
     return new Intl.NumberFormat('en-US').format(num);
   };
   
