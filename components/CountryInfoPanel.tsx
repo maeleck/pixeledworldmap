@@ -11,7 +11,7 @@ interface CountryInfoPanelProps {
   onClose: () => void;
 }
 
-const SkeletonLoader: React.FC = () => (
+const SkeletonLoader = () => (
     <div className="animate-pulse p-6 space-y-6 font-pixel">
       <div className="h-8 bg-gray-600 rounded w-3/4"></div>
       <div className="space-y-4">
@@ -30,7 +30,7 @@ const SkeletonLoader: React.FC = () => (
 );
 
 
-const InfoRow: React.FC<{ icon: React.ReactNode; label: string; value: React.ReactNode; }> = ({ icon, label, value }) => (
+const InfoRow = ({ icon, label, value }) => (
     <div className="flex items-start space-x-4 py-3 border-b border-gray-700">
         <div className="flex-shrink-0 w-6 h-6 text-indigo-400">{icon}</div>
         <div>
@@ -40,14 +40,14 @@ const InfoRow: React.FC<{ icon: React.ReactNode; label: string; value: React.Rea
     </div>
 );
 
-export const CountryInfoPanel: React.FC<CountryInfoPanelProps> = ({
+export const CountryInfoPanel = ({
   isVisible,
   isLoading,
   countryFacts,
   error,
   onClose,
 }) => {
-  const [activeTab, setActiveTab] = useState<'stats' | 'vlog'>('stats');
+  const [activeTab, setActiveTab] = useState('stats');
 
   useEffect(() => {
     if (countryFacts) {
@@ -59,7 +59,7 @@ export const CountryInfoPanel: React.FC<CountryInfoPanelProps> = ({
     return new Intl.NumberFormat('en-US').format(num);
   };
   
-  const TabButton: React.FC<{ isActive: boolean; onClick: () => void; children: React.ReactNode }> = ({ isActive, onClick, children }) => (
+  const TabButton = ({ isActive, onClick, children }) => (
     <button
       onClick={onClick}
       className={`font-pixel py-2 px-4 text-sm font-medium rounded-t-lg transition-colors duration-200 focus:outline-none ${
