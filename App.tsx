@@ -7,8 +7,6 @@ import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
 const App = () => {
-  // The explicit type annotation has been removed to fix a Babel parsing bug.
-  // The type is inferred correctly from the array literal.
   const markers = [
     { countryName: 'United States of America', top: '42%', left: '25%' },
     { countryName: 'Brazil', top: '68%', left: '35%' },
@@ -30,12 +28,12 @@ const App = () => {
     { countryName: 'New Zealand', top: '85%', left: '93%' },
   ];
 
-  const [selectedCountry, setSelectedCountry] = useState<CountryFacts | null>(null);
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const [isPanelVisible, setIsPanelVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState(null);
 
-  const mapViewportRef = useRef<HTMLDivElement>(null);
+  const mapViewportRef = useRef(null);
   const isDraggingRef = useRef(false);
   const startPosRef = useRef({ startX: 0, startY: 0, scrollLeft: 0, scrollTop: 0 });
 
