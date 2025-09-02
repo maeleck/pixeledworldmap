@@ -129,7 +129,7 @@ const App = () => {
             onTouchMove={(e) => handlePanMove(e.touches[0].clientX, e.touches[0].clientY)}
             onTouchEnd={handlePanEnd}
         >
-            <div className="relative" style={{ minWidth: '200vw', minHeight: '200vh', aspectRatio: '100 / 35' }}>
+            <div className="relative" style={{ minWidth: '150vw', minHeight: '150vh', aspectRatio: '100 / 35' }}>
                  <WorldMapSvg />
 
                 {markers.map((marker) => (
@@ -138,7 +138,7 @@ const App = () => {
                     onMouseDown={(e) => e.stopPropagation()}
                     onTouchStart={(e) => e.stopPropagation()}
                     onClick={() => handleMarkerClick(marker.countryName)}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 z-10 group"
+                    className={`absolute transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 z-10 group transition-opacity duration-500 ${isPanelVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
                     style={{ top: marker.top, left: marker.left }}
                     aria-label={`Show facts for ${marker.countryName}`}
                   >
