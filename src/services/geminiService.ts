@@ -1,4 +1,3 @@
-
 import type { CountryFacts } from '../types.ts';
 
 // Static data instead of API calls
@@ -15,7 +14,7 @@ const countryData: CountryFacts[] = [
       'It has no official language at the federal level.',
       'The Library of Congress is the largest library in the world.'
     ],
-    youtubeVideoId: '_63sGA1M-aI'
+    youtubeVideoId: 'RSZVP4M1bQ0'
   },
   {
     countryName: 'Canada',
@@ -29,7 +28,7 @@ const countryData: CountryFacts[] = [
       'It has more lakes than the rest of the world\'s lakes combined.',
       'The national animal is the beaver.'
     ],
-    youtubeVideoId: '3uB-e_0_T-A'
+    youtubeVideoId: 'PsuUufHaCuI'
   },
   {
     countryName: 'Japan',
@@ -43,7 +42,7 @@ const countryData: CountryFacts[] = [
       'It has the world\'s oldest continuously running company, Kongō Gumi.',
       'Vending machines in Japan sell everything from hot noodles to fresh eggs.'
     ],
-    youtubeVideoId: 'zYPhc1_k6-E'
+    youtubeVideoId: 'v11EBl0CPOU'
   },
   {
     countryName: 'Brazil',
@@ -57,7 +56,7 @@ const countryData: CountryFacts[] = [
       'It is home to the Amazon Rainforest, the largest tropical rainforest in the world.',
       'The Christ the Redeemer statue in Rio de Janeiro is one of the New Seven Wonders of the World.'
     ],
-    youtubeVideoId: '9fTR4_cmQ4o'
+    youtubeVideoId: 'J3jufq8b7ms'
   },
   {
     countryName: 'Australia',
@@ -71,7 +70,7 @@ const countryData: CountryFacts[] = [
         'It has over 10,000 beaches.',
         'The Great Barrier Reef is the world\'s largest coral reef system.'
     ],
-    youtubeVideoId: '7T_n_21i4mI'
+    youtubeVideoId: 'HRg1gJi6yqc'
   },
     {
     countryName: 'India',
@@ -85,7 +84,7 @@ const countryData: CountryFacts[] = [
         'The game of chess was invented in India.',
         'It has the second-largest road network in the world.'
     ],
-    youtubeVideoId: '4DEaTqSLo1o'
+    youtubeVideoId: 'LQ5gb3ocwcc'
   },
   {
     countryName: 'China',
@@ -113,7 +112,7 @@ const countryData: CountryFacts[] = [
         'The Industrial Revolution began in the United Kingdom.',
         'London is home to the oldest underground railway network in the world.'
     ],
-    youtubeVideoId: 'ns9_g_r5E4U'
+    youtubeVideoId: 'DNnkmK0ZUIk'
   },
   {
     countryName: 'Germany',
@@ -127,7 +126,7 @@ const countryData: CountryFacts[] = [
         'It is the second-most popular immigration destination in the world, after the United States.',
         'The cuckoo clock was invented in Germany.'
     ],
-    youtubeVideoId: 'XfsoSft3y4E'
+    youtubeVideoId: 'p_kKHvbZ4lE'
   },
     {
     countryName: 'Egypt',
@@ -141,7 +140,7 @@ const countryData: CountryFacts[] = [
         'The ancient Egyptians invented the 365-day calendar.',
         'The Nile is the longest river in the world.'
     ],
-    youtubeVideoId: 'r_L-JqK25wQ'
+    youtubeVideoId: 'H_TK4ObpQnA'
   },
   {
     countryName: 'South Africa',
@@ -155,7 +154,7 @@ const countryData: CountryFacts[] = [
         'It is the only country in the world to have hosted the soccer, cricket and rugby World Cups.',
         'It is home to the world\'s largest bird, the ostrich.'
     ],
-    youtubeVideoId: 'E2DwB__S_s4'
+    youtubeVideoId: '8OOKntTfie8'
   },
   {
     countryName: 'Russia',
@@ -183,7 +182,7 @@ const countryData: CountryFacts[] = [
         'It is the birthplace of the tango.',
         'The Andes Mountains, the longest mountain range in the world, run through Argentina.'
     ],
-    youtubeVideoId: 'u4k7yDimG8g'
+    youtubeVideoId: 'YPzW3GP1SbU'
   },
   {
     countryName: 'Mexico',
@@ -197,7 +196,7 @@ const countryData: CountryFacts[] = [
         'It is home to the ancient civilizations of the Maya and Aztec.',
         'Chocolate, corn, and chilies were all introduced to the world by Mexico.'
     ],
-    youtubeVideoId: 'uU5y4_a5i_s'
+    youtubeVideoId: 'FLI0qrAffKk'
   },
   {
     countryName: 'Nigeria',
@@ -211,7 +210,7 @@ const countryData: CountryFacts[] = [
         'It is home to Nollywood, the second-largest film industry in the world.',
         'The country is named after the Niger River.'
     ],
-    youtubeVideoId: 'smwn3wGkQfk'
+    youtubeVideoId: '2ZrYwuxThFA'
   },
   {
     countryName: 'Sweden',
@@ -225,7 +224,7 @@ const countryData: CountryFacts[] = [
         'It is the birthplace of IKEA and Spotify.',
         'The country has a "right to roam", allowing people to freely hike through most of the countryside.'
     ],
-    youtubeVideoId: 'Udda0b-b5Y0'
+    youtubeVideoId: 'sZi2CT9gZ-M'
   },
   {
     countryName: 'Indonesia',
@@ -253,7 +252,7 @@ const countryData: CountryFacts[] = [
         'It is home to more sheep than people.',
         'The Lord of the Rings trilogy was filmed entirely in New Zealand.'
     ],
-    youtubeVideoId: 'H_4Q262-E9g'
+    youtubeVideoId: 'QAu6oj9tAzY'
   }
 ];
 
