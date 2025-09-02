@@ -1,5 +1,5 @@
 
-import type { CountryFacts } from '../types.ts';
+import { CountryFacts } from '../types.ts';
 
 // Static data instead of API calls
 const countryData: CountryFacts[] = [
