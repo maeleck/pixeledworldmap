@@ -2,7 +2,6 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { CountryInfoPanel } from './components/CountryInfoPanel.tsx';
 import { getCountryFacts } from './services/geminiService.ts';
-import { CountryFacts } from './types.ts';
 import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
