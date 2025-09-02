@@ -6,11 +6,11 @@ import { CountryFacts } from './types.ts';
 import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
-type Marker = {
+interface Marker {
   countryName: string;
   top: string;
   left: string;
-};
+}
 
 // Adjusted marker positions for the new ASCII map
 const markers: Marker[] = [
