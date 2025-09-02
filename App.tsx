@@ -6,14 +6,12 @@ import { CountryFacts } from './types.ts';
 import { PinIcon } from './components/icons.tsx';
 import { WorldMapSvg } from './components/WorldMapSvg.tsx';
 
-interface Marker {
+// Adjusted marker positions for the new ASCII map
+const markers: {
   countryName: string;
   top: string;
   left: string;
-}
-
-// Adjusted marker positions for the new ASCII map
-const markers: Marker[] = [
+}[] = [
   { countryName: 'United States of America', top: '42%', left: '25%' },
   { countryName: 'Brazil', top: '68%', left: '35%' },
   { countryName: 'Japan', top: '31%', left: '90%' },
